@@ -1,6 +1,5 @@
 ---
-- name: change root password
+- name: change admin password
   user:
     name: "admin"
     password: "{{ admin_password|password_hash('sha512') }}"
-    ssh_key_passphrase: "{{ admin_ssh_passphrase  }}"
